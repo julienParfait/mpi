@@ -55,11 +55,30 @@ res$summary
     ## 3 Multidimensional Poverty Index (MPI)  0.54
 
 ``` r
-res$plot
+#res$plot
 ```
 
-<div class="plotly html-widget html-fill-item" id="htmlwidget-45ec5a5fef7d9afb50c4" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-45ec5a5fef7d9afb50c4">{"x":{"visdat":{"1f0071ba3118":["function () ","plotlyVisDat"]},"cur_data":"1f0071ba3118","attrs":{"1f0071ba3118":{"x":["Non-poor","Poor"],"y":[40,60],"text":["40%","60%"],"textposition":"outside","marker":{"color":["#27AE60","#C0392B"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":60,"l":60,"t":25,"r":10},"title":{"text":"Poverty Status Distribution","font":{"size":14}},"xaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Poverty Status","font":{"size":12}},"type":"category","categoryorder":"array","categoryarray":["Non-poor","Poor"]},"yaxis":{"domain":[0,1],"automargin":true,"title":{"text":"Percentage","font":{"size":12}}},"uniformtext":{"minsize":10,"mode":"hide"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Non-poor","Poor"],"y":[40,60],"text":["40%","60%"],"textposition":["outside","outside"],"marker":{"color":["#27AE60","#C0392B"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+## Visualisation
+
+``` r
+library(ggplot2)
+
+# Données
+df <- data.frame(
+  status = c("Non-poor", "Poor"),
+  pct = c(40, 60)
+)
+
+# Graphique avec texte
+ggplot(df, aes(x = status, y = pct, fill = status)) +
+  geom_col() +
+  geom_text(aes(label = paste0(pct, "%")), vjust = -0.5, size = 5) +  # <- Ajouter ce bloc
+  scale_fill_manual(values = c("#27AE60", "#C0392B")) +
+  labs(title = "Poverty Status Distribution", x = "Poverty Status", y = "Percentage") +
+  theme_minimal()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## Output Meaning
 

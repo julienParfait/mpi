@@ -40,8 +40,28 @@ res <- MPI(data, weights, k)
 
 head(res$data)
 res$summary
-res$plot
+#res$plot
 
+```
+
+## Visualisation 
+
+```{r}
+library(ggplot2)
+
+# Données
+df <- data.frame(
+  status = c("Non-poor", "Poor"),
+  pct = c(40, 60)
+)
+
+# Graphique avec texte
+ggplot(df, aes(x = status, y = pct, fill = status)) +
+  geom_col() +
+  geom_text(aes(label = paste0(pct, "%")), vjust = -0.5, size = 5) +  # <- Ajouter ce bloc
+  scale_fill_manual(values = c("#27AE60", "#C0392B")) +
+  labs(title = "Poverty Status Distribution", x = "Poverty Status", y = "Percentage") +
+  theme_minimal()
 ```
 
 
