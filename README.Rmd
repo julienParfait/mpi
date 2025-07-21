@@ -1,8 +1,11 @@
 ---
-output: github_document
+output: 
+  github_document:
+    html_preview: true
+always_allow_html: true
 ---
 
-# mpi <img src="https://img.shields.io/badge/status-dev-blue" height="20"/>
+# mpi: Multidimensional Poverty Index (Alkire-Foster Method)
 
 The **mpi** package provides tools to compute the Multidimensional Poverty Index (MPI) using the Alkire-Foster methodology.
 
@@ -12,18 +15,43 @@ It allows users to input binary deprivation indicators, assign weights, and spec
 - A summary table with key statistics: Incidence (H), Intensity (A), and MPI
 - An interactive `plotly` barplot of poverty status
 
----
-
 ## Installation
 
 ```{r}
-# Install from GitHub (dev version)
-remotes::install_github("julienParfait/MPI")
+# Install from GitHub
+# remotes::install_github("julienParfait/MPI")
+```
+
+## Example 
+
+```{r}
+library(mpi)
+
+data <- data.frame(
+  edu = c(1, 0, 1, 1, 0),
+  health = c(0, 1, 1, 1, 0),
+  water = c(1, 0, 1, 1, 1)
+)
+
+weights <- c(0.4, 0.3, 0.3)
+k <- 0.33
+
+res <- MPI(data, weights, k)
+
+head(res$data)
+res$summary
+res$plot
+
 ```
 
 
+## Output Meaning
 
+* H (Headcount ratio): Proportion of people who are multidimensionally poor
 
+* A (Intensity): Average share of deprivations among the poor
+
+* MPI: The product of H and A
 
 
 
