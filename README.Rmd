@@ -1,0 +1,30 @@
+---
+output: github_document
+---
+
+# mpi <img src="https://img.shields.io/badge/status-dev-blue" height="20"/>
+
+The **mpi** package provides tools to compute the Multidimensional Poverty Index (MPI) using the Alkire-Foster methodology.
+
+It allows users to input binary deprivation indicators, assign weights, and specify a global poverty cutoff (`k`). The package returns:
+
+- A data frame with individual deprivation scores and poverty status
+- A summary table with key statistics: Incidence (H), Intensity (A), and MPI
+- An interactive `plotly` barplot of poverty status
+
+---
+
+## Installation
+
+```{r}
+# Install from GitHub (dev version)
+remotes::install_github("julienParfait/MPI")
+```
+
+
+
+
+
+
+
+
