@@ -46,23 +46,32 @@ res$summary
 
 ## Visualisation 
 
-```{r}
-library(ggplot2)
 
-# Données
+```{r save-plot, echo=FALSE, fig.align="center", fig.cap="Distribution of Poverty Status", out.width="70%"}
+library(ggplot2)
+# Data
 df <- data.frame(
   status = c("Non-poor", "Poor"),
   pct = c(40, 60)
 )
 
-# Graphique avec texte
-ggplot(df, aes(x = status, y = pct, fill = status)) +
+# graph 
+p <- ggplot(df, aes(x = status, y = pct, fill = status)) +
   geom_col() +
-  geom_text(aes(label = paste0(pct, "%")), vjust = -0.5, size = 5) +  # <- Ajouter ce bloc
+  geom_text(aes(label = paste0(pct, "%")), vjust = -0.5, size = 5) +
   scale_fill_manual(values = c("#27AE60", "#C0392B")) +
   labs(title = "Poverty Status Distribution", x = "Poverty Status", y = "Percentage") +
   theme_minimal()
+
+if (!dir.exists("man/figures")) {
+  dir.create("man/figures", recursive = TRUE)
+}
+
+ggsave("man/figures/poverty_status.png", p, width = 6, height = 4, dpi = 300)
+
+p
 ```
+
 
 
 ## Output Meaning

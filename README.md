@@ -60,25 +60,15 @@ res$summary
 
 ## Visualisation
 
-``` r
-library(ggplot2)
+<div class="figure" style="text-align: center">
 
-# Données
-df <- data.frame(
-  status = c("Non-poor", "Poor"),
-  pct = c(40, 60)
-)
+<img src="README_files/figure-gfm/save-plot-1.png" alt="Distribution of Poverty Status" width="70%" />
+<p class="caption">
 
-# Graphique avec texte
-ggplot(df, aes(x = status, y = pct, fill = status)) +
-  geom_col() +
-  geom_text(aes(label = paste0(pct, "%")), vjust = -0.5, size = 5) +  # <- Ajouter ce bloc
-  scale_fill_manual(values = c("#27AE60", "#C0392B")) +
-  labs(title = "Poverty Status Distribution", x = "Poverty Status", y = "Percentage") +
-  theme_minimal()
-```
+Distribution of Poverty Status
+</p>
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+</div>
 
 ## Output Meaning
 
