@@ -60,15 +60,11 @@ res$summary
 
 ## Visualisation
 
-<div class="figure" style="text-align: center">
-
-<img src="README_files/figure-gfm/save-plot-1.png" alt="Distribution of Poverty Status" width="70%" />
-<p class="caption">
-
-Distribution of Poverty Status
-</p>
-
-</div>
+<figure>
+<img src="man/figures/poverty_status.png"
+alt="Poverty Status Distribution" />
+<figcaption aria-hidden="true">Poverty Status Distribution</figcaption>
+</figure>
 
 ## Output Meaning
 

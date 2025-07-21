@@ -68,10 +68,9 @@ if (!dir.exists("man/figures")) {
 }
 
 ggsave("man/figures/poverty_status.png", p, width = 6, height = 4, dpi = 300)
-
-p
 ```
 
+![Poverty Status Distribution](man/figures/poverty_status.png)
 
 
 ## Output Meaning
