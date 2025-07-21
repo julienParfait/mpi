@@ -58,12 +58,6 @@ res$summary
 #res$plot
 ```
 
-<figure>
-<img src="man/figures/poverty_status.png"
-alt="Poverty Status Distribution" />
-<figcaption aria-hidden="true">Poverty Status Distribution</figcaption>
-</figure>
-
 ## Output Meaning
 
 - H (Headcount ratio): Proportion of people who are multidimensionally
