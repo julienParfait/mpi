@@ -1,0 +1,18 @@
+Package: mpi
+Type: Package
+Title: Multidimensional Poverty Index (Alkire-Foster Method)
+Version: 0.1.0
+Author: Julien Bidias [aut, cre]
+Maintainer: Julien Bidias <julienbidias246@gmail.com>
+Description: This package computes the Multidimensional Poverty Index (MPI) 
+    using the Alkire-Foster methodology. It allows users to supply binary 
+    deprivation indicators, assign weights, and specify a poverty cutoff. 
+    The function returns key statistics (H, A, MPI) and generates an 
+    interactive Plotly bar chart of poverty status.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    plotly,
+    magrittr
+RoxygenNote: 7.3.2
