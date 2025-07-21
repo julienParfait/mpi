@@ -58,8 +58,6 @@ res$summary
 #res$plot
 ```
 
-## Visualisation
-
 <figure>
 <img src="man/figures/poverty_status.png"
 alt="Poverty Status Distribution" />
