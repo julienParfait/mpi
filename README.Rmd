@@ -11,9 +11,9 @@ The **mpi** package provides tools to compute the Multidimensional Poverty Index
 
 It allows users to input binary deprivation indicators, assign weights, and specify a global poverty cutoff (k). The package returns:
 
-- A data frame with individual deprivation scores and poverty status
-- A summary table with key statistics: Incidence (H), Intensity (A), and MPI
-- An interactive **plotly** barplot of poverty status
+-   A data frame with individual deprivation scores and poverty status
+-   A summary table with key statistics: Incidence (H), Intensity (A), and MPI
+-   An interactive **plotly** barplot of poverty status
 
 ## Installation
 
@@ -22,7 +22,7 @@ It allows users to input binary deprivation indicators, assign weights, and spec
 # remotes::install_github("julienParfait/MPI")
 ```
 
-## Example 
+## Example
 
 ```{r}
 library(mpi)
@@ -44,15 +44,12 @@ res$summary
 
 ```
 
-
 ## Output Meaning
 
-* H (Headcount ratio): Proportion of people who are multidimensionally poor
+-   H (Headcount ratio): Proportion of people who are multidimensionally poor
 
-* A (Intensity): Average share of deprivations among the poor
+-   A (Intensity): Average share of deprivations among the poor
 
-* MPI: The product of H and A
+-   MPI: The product of H and A
 
-
-
-
+[![Pkgdown site](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://julienParfait.github.io/MPI/)
