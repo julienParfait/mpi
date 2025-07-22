@@ -1,6 +1,9 @@
 
 # MPI : Multidimensional Poverty Index (Alkire-Foster Method)
 
+[![Pkgdown
+site](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://julienParfait.github.io/MPI/)
+
 The **mpi** package provides tools to compute the Multidimensional
 Poverty Index (MPI) using the Alkire-Foster methodology.
 
@@ -66,6 +69,3 @@ res$summary
 - A (Intensity): Average share of deprivations among the poor
 
 - MPI: The product of H and A
-
-[![Pkgdown
-site](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://julienParfait.github.io/MPI/)
