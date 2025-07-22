@@ -7,7 +7,7 @@ always_allow_html: true
 
 # MPI : Multidimensional Poverty Index (Alkire-Foster Method)
 
-[![Pkgdown site](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://julienParfait.github.io/MPI/)
+[![Pkgdown site](https://img.shields.io/badge/docs-pkgdown-blue.svg)](https://julienparfait.github.io/mpi/)
 
 The **mpi** package provides tools to compute the Multidimensional Poverty Index (MPI) using the Alkire-Foster methodology.
 
@@ -38,7 +38,7 @@ data <- data.frame(
 weights <- c(0.4, 0.3, 0.3)
 k <- 0.33
 
-res <- MPI(data, weights, k)
+res <- mpi(data, weights, k)
 
 head(res$data)
 res$summary
